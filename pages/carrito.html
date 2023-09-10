@@ -8,12 +8,12 @@
     <meta name="description"
         content="Ponemos a tu alcance todos los productos necesarios para el buen cuidado de tu mascota." />
     <!-- favicon -->
-    <link rel="shortcut icon" href="./img/favicon.png" />
+    <link rel="shortcut icon" href="../img/favicon.png" />
     <!-- BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
     <!-- STYLESHEET PROPIA -->
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
     <title>Dirty Paws</title>
 </head>
 
@@ -22,9 +22,9 @@
  <header>
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
-        <a class="navbar-brand" href="./index.html">
+        <a class="navbar-brand" href="../index.html">
           <!-- logo -->
-          <img src="./img/logo1.png" alt="logo tienda" width="auto" height="70" />
+          <img src="../img/logo1.png" alt="logo protectora" width="auto" height="70" />
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,28 +33,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <!-- nav bar -->
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0 nav-underline">
+        
             <li class="nav-item">
-              <a class="nav-link nav-categoria active" aria-current="page" id="todos" href="./index.html">Todos los Productos</a>
+              <a class="nav-link" href="../index.html">Seguir Comprando</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-categoria" id="paseo">Paseo</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav-categoria" id="alimentacion">Alimentacion</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav-categoria" id="enriquecimiento">Enriquecimiento </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav-categoria" id="higiene">Higiene</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="./pages/carrito.html"> 
+                <a class="nav-link" href=""> 
                     <div class="carrito-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-fill" viewBox="0 0 16 16">
                         <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z"/>
                         </svg> 
-                        <span class="numero-carrito" id="numero">0</span>
                     </div>
                 </a>
               </li>
@@ -64,10 +52,45 @@
     </nav>
   </header>
 
-  <!-- Main -->
   <main>
-    <h2 class="titulo-principal" id="titulo-principal">Todos los Productos</h2>
-    <section id="contenedor-productos" class="contenedor-productos">      
+    
+    <h2 class="titulo-principal">Mi Cesta</h2>
+    <section class="contenedor-carrito">
+
+        <!-- cesta de compra vacia - mensaje -->
+      <div id="carrito-vacio">
+        <div class="carrito-vacio-icon" >
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+          <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+        </svg>        
+        </div>
+        <p class="carrito-texto" >Tu cesta de compra está vacía </p>
+
+      </div>
+      
+
+        <!-- productos que se agregan al carrito -->
+
+        <div class="carrito-productos disabled" id="carrito-productos">
+           <!-- esto se completara con JS -->
+           
+        </div>
+
+        <div class="carrito-acciones disabled" id="carrito-acciones">
+            <div class="carrito-acciones-izquierda">
+                <button id="carrito-acciones-vaciar" class="carrito-acciones-vaciar">Vaciar Cesta</button>
+            </div>
+            <div class="carrito-acciones-derecha">
+                <div class="carrito-acciones-total">
+                    <p>Total:</p>
+                    <p id="total"> 23.90€</p>
+                </div>
+                <button id="carrito-acciones-comprar" class="carrito-acciones-comprar">Comprar Ahora</button>
+            </div>
+        </div>
+
+        <p class="carrito-texto disabled" id="carrito-comprado">Gracias por tu compra</p>
+
     </section>
   </main>
 
@@ -82,10 +105,10 @@
 
       <!-- Redes -->
       <div class="footer__Social">
-        <a href="#"><img src="./img/facebook.svg" alt="facebook" /></a>
-        <a href="#"><img src="./img/instagram.svg" alt="instagram" /></a>
-        <a href="#"><img src="./img/tiktok.svg" alt="Tiktok" /></a>
-        <a href="#"><img src="./img/youtube.svg" alt="YouTube" /></a>
+        <a href="#"><img src="../img/facebook.svg" alt="facebook" /></a>
+        <a href="#"><img src="../img/instagram.svg" alt="instagram" /></a>
+        <a href="#"><img src="../img/tiktok.svg" alt="Tiktok" /></a>
+        <a href="#"><img src="../img/youtube.svg" alt="YouTube" /></a>
       </div>
     </section>
   </footer>
@@ -94,7 +117,8 @@
 <!-- SCRIPTS -->
 
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
- <script src="./js/index.js"></script>
-    
+
+ <script src="../js/carrito.js"></script>
+     
 </body>
 </html>
